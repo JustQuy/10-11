@@ -1,1 +1,40 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Đăng nhập - Online Learning</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body class="login-body">
+  <div id="loading-screen" class="loading">
+    <div class="spinner"></div>
+    <p>Đang tải...</p>
+  </div>
+
+  <div class="login-container animate__animated animate__fadeInUp" id="login-container">
+    <div class="logo"><i class="fa-solid fa-graduation-cap"></i> Online Learning</div>
+    <form id="loginForm" class="login-form">
+      <label>Email sinh viên</label>
+      <input type="text" id="username" required placeholder="vd: student@edu.vn">
+
+      <label>Mật khẩu</label>
+      <input type="password" id="password" required placeholder="•••••••">
+
+      <div class="remember">
+        <input type="checkbox" id="remember">
+        <label for="remember">Ghi nhớ đăng nhập</label>
+      </div>
+
+      <button type="submit"><i class="fa-solid fa-right-to-bracket"></i> Đăng nhập</button>
+      <p class="error" id="error-msg"></p>
+    </form>
+    <p class="demo">Demo: <strong>student@edu.vn / 12345</strong></p>
+  </div>
+
+  <script src="assets/js/script.js"></script>
+</body>
+</html>
 

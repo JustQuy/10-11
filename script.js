@@ -5,7 +5,6 @@ document.addEventListener("DOMContentLoaded", () => {
   if (form) {
     form.addEventListener("submit", function (e) {
       e.preventDefault();
-
       const username = document.getElementById("username").value.trim();
       const password = document.getElementById("password").value.trim();
 
@@ -17,39 +16,20 @@ document.addEventListener("DOMContentLoaded", () => {
         loading.style.display = "flex";
 
         setTimeout(() => {
-          Swal.fire({
-            icon: 'success',
-            title: 'Đăng nhập thành công!',
-            text: 'Chào mừng bạn đến với Online Learning 🎓',
-            showConfirmButton: false,
-            timer: 1500
-          }).then(() => {
-            window.location.href = "home.html";
-          });
+          Swal.fire({ icon: 'success', title: 'Đăng nhập thành công!', showConfirmButton: false, timer: 1500 })
+          .then(() => { window.location.href = "home.html"; });
         }, 1000);
       } else {
-        Swal.fire({
-          icon: 'error',
-          title: 'Sai thông tin đăng nhập',
-          text: 'Vui lòng kiểm tra lại tài khoản hoặc mật khẩu!',
-        });
+        Swal.fire({ icon:'error', title:'Sai thông tin', text:'Vui lòng kiểm tra lại!' });
       }
     });
   }
 
-  // Nếu đang ở home.html
   const logoutBtn = document.getElementById("logoutBtn");
   if (logoutBtn) {
     logoutBtn.addEventListener("click", () => {
-      Swal.fire({
-        icon: 'info',
-        title: 'Đã đăng xuất',
-        text: 'Hẹn gặp lại bạn sau!',
-        showConfirmButton: false,
-        timer: 1000
-      }).then(() => {
-        window.location.href = "index.html";
-      });
+      Swal.fire({ icon:'info', title:'Đã đăng xuất', showConfirmButton:false, timer:1000 })
+      .then(() => { window.location.href="index.html"; });
     });
   }
 });
